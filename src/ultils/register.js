@@ -52,7 +52,7 @@ registerConfig.register({
   label: '单选题',
   type: 'RadioQuestion',
   style: {
-    width: '100%',
+    width: '50%',
     minHeight: '120px'
   },
   props: {
@@ -78,7 +78,7 @@ registerConfig.register({
   label: '多选题',
   type: 'CheckboxQuestion',
   style: {
-    width: '100%',
+    width: '50%',
     minHeight: '120px'
   },
   props: {
@@ -105,7 +105,7 @@ registerConfig.register({
   label: '填空题',
   type: 'FillQuestion',
   style: {
-    width: '100%',
+    width: '50%',
     minHeight: '80px'
   },
   props: {
@@ -130,7 +130,7 @@ registerConfig.register({
   label: '问答题',
   type: 'EssayQuestion',
   style: {
-    width: '100%',
+    width: '50%',
     minHeight: '150px'
   },
   props: {
