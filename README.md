@@ -1,35 +1,71 @@
-# test-lowcode
+# 🚀 低代码可视化编辑器
 
-This template should help get you started developing with Vue 3 in Vite.
+一个基于 Vue3 的拖拽式可视化问卷编辑器，支持组件拖拽、属性配置、实时预览和问卷答题等功能。
 
-## Recommended IDE Setup
+## ✨ 特性
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+### 🎯 核心功能
 
-## Customize configuration
+- **拖拽式编辑器** - 支持从侧边栏拖拽组件到画布
+- **智能辅助线** - 3像素精度对齐，提供视觉辅助
+- **多选操作** - 支持 Ctrl/Cmd 多选，批量拖拽移动
+- **一键布局** - 网格、对齐、分布等智能布局算法
+- **撤销重做** - 无限级历史记录，支持快捷键操作
+- **数据持久化** - JSON格式导入导出，支持作品保存
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+### 🧩 组件系统
 
-## Project Setup
+- **表单组件** - 输入框、单选、多选、下拉选择
+- **展示组件** - 文本、图片、按钮
+- **可扩展** - 组件注册机制，易于添加新组件类型
 
-```sh
+
+
+## 📦 安装使用
+
+### 环境要求
+
+- Node.js >= 16.0.0
+- npm >= 8.0.0
+
+### 快速开始
+
+```bash
+# 克隆项目
+git clone <repository-url>
+cd test-lowcode
+
+# 安装依赖
 npm install
-```
 
-### Compile and Hot-Reload for Development
-
-```sh
+# 启动开发服务器
 npm run dev
-```
 
-### Compile and Minify for Production
-
-```sh
+# 构建生产版本
 npm run build
-```
 
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
+# 代码检查
 npm run lint
 ```
+
+## 🎮 使用指南
+
+### 编辑器使用
+
+1. **添加组件**: 从左侧组件列表拖拽组件到画布
+2. **选择组件**: 点击画布中的组件进行选择
+3. **多选组件**: 按住 Ctrl/Cmd 点击多个组件
+4. **移动组件**: 拖拽选中的组件到目标位置
+5. **编辑属性**: 在右侧属性面板修改组件属性
+6. **快速布局**: 使用顶部一键布局按钮
+
+### 问卷预览
+预览界面路由为 /answer
+
+1. **导出问卷**: 在编辑器中点击"导出JSON"
+2. **加载问卷**: 在预览页面点击"加载问卷"选择JSON文件
+3. **填写答案**: 在表单组件中输入答案
+4. **提交答案**: 点击"提交答案"查看结果
+
+
+
