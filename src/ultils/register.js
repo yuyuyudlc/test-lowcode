@@ -29,22 +29,6 @@ registerConfig.register({
   category: 'form'
 });
 
-registerConfig.register({
-  id: 'button_' + Date.now(),
-  label: '按钮',
-  type: 'ElButton',
-  style: {
-    width: 'auto',
-    height: '32px',
-  },
-  props: {
-    text: '按钮',
-    type: 'primary',
-    disabled: false
-  },
-  events: {},
-  category: 'form'
-});
 
 // 注册题目组件
 registerConfig.register({
@@ -82,7 +66,7 @@ registerConfig.register({
     minHeight: '120px'
   },
   props: {
-    title: '这是一道多选题',
+    title: '多选题',
     description: '可选择多个答案',
     options: [
       { label: '选项A', value: 'A' },

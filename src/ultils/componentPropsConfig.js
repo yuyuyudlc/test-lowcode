@@ -1,25 +1,4 @@
 const componentPropsConfig = {
-  ElButton: [
-    { name: 'text', label: '按钮文本', type: 'string', placeholder: '请输入按钮文本' },
-    {
-      name: 'type', label: '按钮类型', type: 'select', options: [
-        { label: '默认', value: '' },
-        { label: '主要', value: 'primary' },
-        { label: '成功', value: 'success' },
-        { label: '信息', value: 'info' },
-        { label: '警告', value: 'warning' },
-        { label: '危险', value: 'danger' }
-      ]
-    },
-    {
-      name: 'size', label: '尺寸', type: 'select', options: [
-        { label: '大', value: 'large' },
-        { label: '默认', value: '' },
-        { label: '小', value: 'small' }
-      ]
-    },
-    { name: 'disabled', label: '禁用', type: 'boolean' }
-  ],
   ElInput: [
     { name: 'placeholder', label: '占位符', type: 'string', placeholder: '请输入占位符文本' },
     { name: 'disabled', label: '禁用', type: 'boolean' },

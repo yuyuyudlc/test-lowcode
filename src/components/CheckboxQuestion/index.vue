@@ -11,9 +11,18 @@
 </template>
 
 <script setup>
-import { ref   } from 'vue'
+import { ref, watch } from 'vue'
 
 const props = defineProps({
+  // 添加 modelValue prop 用于 v-model
+  modelValue: {
+    type: Array,
+    default: () => []
+  },
+  max: {
+    type: Number,
+    default: 3
+  },
   title: {
     type: String,
     default: '这是一道多选题'
@@ -39,19 +48,27 @@ const props = defineProps({
     type: Boolean,
     default: false
   },
-  max: {
-    type: Number,
-    default: 3
-  }
 })
 
-const emit = defineEmits(['change'])
+const emit = defineEmits(['change', 'update:modelValue'])
 
-const selectedValues = ref([])
+
+const selectedValues = ref([...props.modelValue])
 
 const handleChange = (value) => {
+
   emit('change', value)
+  emit('update:modelValue', value)
 }
+
+// 监听外部 modelValue 变化，同步到内部状态
+watch(
+  () => props.modelValue,
+  (newValue) => {
+    selectedValues.value = [...newValue]
+  },
+  { deep: true }
+)
 </script>
 
 <style scoped>
